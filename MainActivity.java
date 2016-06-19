@@ -6,6 +6,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
+import com.jit.lib.SmartImageView;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -91,6 +93,8 @@ public class MainActivity extends Activity {
 			TextView tv_title = (TextView) view.findViewById(R.id.tv_title);
 			TextView tv_desc = (TextView) view.findViewById(R.id.tv_desc);
 			TextView tv_type = (TextView) view.findViewById(R.id.tv_type);
+			SmartImageView smartImageView = (SmartImageView) view.findViewById(R.id.iv);
+			smartImageView.setImageUrl(news.getImage());
 			String title = news.getTitle();
 			tv_title.setText(title);
 			
